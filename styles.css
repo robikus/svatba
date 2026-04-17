@@ -18,6 +18,42 @@ body {
   max-width: 960px;
   margin: 0 auto;
   padding: 0 20px 48px;
+  position: relative;
+}
+
+.lang-switch {
+  position: absolute;
+  top: 36px;
+  right: 20px;
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+}
+
+.lang-switch a img {
+  display: block;
+  border-radius: 2px;
+}
+
+.lang-switch a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  font-family: "Playfair Display", serif;
+  font-size: 0.85rem;
+  color: #6b5540;
+  background: rgba(255, 248, 240, 0.88);
+  border: 1px solid rgba(196, 149, 106, 0.4);
+  border-radius: 20px;
+  padding: 5px 12px;
+  backdrop-filter: blur(4px);
+  transition: background 0.18s, box-shadow 0.18s;
+}
+
+.lang-switch a:hover {
+  background: rgba(255, 244, 230, 1);
+  box-shadow: 0 4px 12px rgba(176, 124, 82, 0.15);
 }
 
 .hero {
