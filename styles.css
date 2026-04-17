@@ -67,11 +67,18 @@ h1 {
 }
 
 .hero-text {
-  margin: 24px auto 0;
-  font-size: 1.15rem;
-  line-height: 1.8;
+  font-family: "Cinzel", serif;
+  font-weight: 700;
+  margin: 6px auto 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
   max-width: 700px;
+  letter-spacing: 0.06em;
   color: #4d443d;
+}
+
+.hero-text:first-of-type {
+  margin-top: 24px;
 }
 
 .section {
@@ -89,9 +96,6 @@ h1 {
   border: 1px solid rgba(220, 194, 175, 0.5);
 }
 
-.section--dark {
-  background: #f5ede4;
-}
 
 .section--cards .section-inner {
   padding: 32px;
@@ -139,6 +143,32 @@ h1 {
 .info-card p {
   margin: 0;
   color: #5d5045;
+}
+
+.info-card ul {
+  margin: 8px 0 0;
+  padding-left: 0;
+  list-style: none;
+  color: #5d5045;
+}
+
+.info-card ul li {
+  position: relative;
+  padding-left: 1.2em;
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+
+.info-card ul li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: #c4956a;
+  font-weight: 700;
+}
+
+.info-card ul li:last-child {
+  margin-bottom: 0;
 }
 
 .section h2 {
