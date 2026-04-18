@@ -194,6 +194,16 @@ h1 {
   border-radius: 20px;
   padding: 24px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.info-card p,
+.info-card ul {
+  text-align: left;
+  align-self: stretch;
 }
 
 .info-card:hover {
@@ -202,17 +212,16 @@ h1 {
 }
 
 .info-icon {
-  font-size: 1.6rem;
   margin-bottom: 16px;
   width: 52px;
   height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #fff4ea, #fde8d4);
-  border: 1px solid rgba(196, 149, 106, 0.35);
+  background: linear-gradient(135deg, #eef2f8, #dce6f4);
+  border: 1px solid rgba(42, 90, 150, 0.2);
   border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(176, 124, 82, 0.12);
+  box-shadow: 0 4px 12px rgba(26, 46, 74, 0.1);
 }
 
 .info-card h3 {
