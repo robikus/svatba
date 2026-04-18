@@ -286,6 +286,24 @@ h1 {
   border-radius: 2px;
 }
 
+.timeline-day {
+  grid-column: 1 / -1;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+  background: #1a2e4a;
+  border-radius: 20px;
+  padding: 4px 14px;
+  display: inline-block;
+  margin: 18px 0 10px;
+  letter-spacing: 0.04em;
+}
+
+.timeline-day:first-child {
+  margin-top: 0;
+}
+
 .timeline-item {
   display: grid;
   grid-template-columns: 80px 20px 1fr;
@@ -337,6 +355,13 @@ h1 {
   font-size: 1rem;
   color: #2b2a28;
   line-height: 1.5;
+}
+
+.timeline-desc {
+  display: block;
+  font-size: 0.88rem;
+  color: #7c6b58;
+  margin-top: 3px;
 }
 
 .timeline-content strong {
