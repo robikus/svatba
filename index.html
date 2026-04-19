@@ -178,7 +178,7 @@
     <section class="section section--navy">
       <div class="section-inner">
         <h2>Napište nám</h2>
-        <form class="contact-form" action="mailto:svatbasibrina@gmail.com" method="post" enctype="text/plain">
+        <form class="contact-form" action="https://formspree.io/f/mlganabq" method="POST">
           <div class="form-group">
             <label for="name">Vaše jméno</label>
             <input type="text" id="name" name="name" placeholder="Jan Novák" required />
@@ -201,11 +201,11 @@
             </div>
             <div class="form-group">
               <label for="children">Kolik z toho dětí?</label>
-              <input type="number" id="children" name="children" min="0" max="20" placeholder="0" required />
+              <input type="number" id="children" name="children" min="0" max="20" value="0" />
             </div>
             <div class="form-group">
               <label for="vegetarians">Kolik z toho vegetariánů?</label>
-              <input type="number" id="vegetarians" name="vegetarians" min="0" max="20" placeholder="0" />
+              <input type="number" id="vegetarians" name="vegetarians" min="0" max="20" value="0" />
             </div>
           </div>
           <div class="form-group">
@@ -217,7 +217,7 @@
           </div>
           <div class="form-group">
             <label for="message">Zpráva</label>
-            <textarea id="message" name="message" rows="5" placeholder="Sem napište svou zprávu…" required></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Sem napište svou zprávu…"></textarea>
           </div>
           <button type="submit" class="form-submit">Odeslat</button>
         </form>
