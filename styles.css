@@ -176,6 +176,7 @@ h1 {
 }
 
 .section.section--navy p,
+.section.section--navy li,
 .section.section--navy .map-credit {
   color: #ffffff;
 }
