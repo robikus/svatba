@@ -10,6 +10,10 @@ h1, h2, h3 {
   font-family: "Dancing Script", cursive;
 }
 
+h3 {
+  font-family: Arial, sans-serif;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -596,6 +600,7 @@ h1 {
 @media (max-width: 720px) {
   .hero {
     padding: 60px 16px;
+    background-size: auto 200px;
   }
 
   .hero::before {
