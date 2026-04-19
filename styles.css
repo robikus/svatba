@@ -129,13 +129,13 @@ h1 {
 }
 
 .hero-text {
-  font-family: "Playfair Display", Georgia, serif;
-  font-weight: 700;
+  font-family: "Dancing Script", cursive;
+  font-weight: 600;
   margin: 6px auto 0;
-  font-size: 1.4rem;
+  font-size: 2.8rem;
   line-height: 1.5;
   max-width: 700px;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
   color: #4d443d;
 }
 
