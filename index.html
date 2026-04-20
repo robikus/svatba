@@ -234,32 +234,30 @@
               <label class="form-radio"><input type="radio" name="attendance" value="Ne, bohužel nemůžeme" /> Ne, bohužel nemůžeme</label>
             </div>
           </div>
-          <div class="form-row">
+          <div id="attendance-details" style="display:none; width:100%">
             <div class="form-group">
-              <label for="count">Kolik vás bude?</label>
-              <input type="number" id="count" name="count" min="1" max="20" value="2" required />
-            </div>
-            <div class="form-group">
-              <label for="children">Kolik z toho dětí?</label>
-              <input type="number" id="children" name="children" min="0" max="20" value="0" />
+              <label for="who">Kdo přijede? Uveďte také věk dětí.</label>
+              <textarea id="who" name="who" rows="3" placeholder="Např. Jana, Petr, děti 5 a 8 let…"></textarea>
             </div>
             <div class="form-group">
-              <label for="vegetarians">Kolik z toho vegetariánů?</label>
-              <input type="number" id="vegetarians" name="vegetarians" min="0" max="20" value="0" />
+              <label>Přijedete už v pátek?</label>
+              <div class="form-radio-group">
+                <label class="form-radio"><input type="radio" name="friday" value="Ano" /> Ano</label>
+                <label class="form-radio"><input type="radio" name="friday" value="Ne" /> Ne</label>
+              </div>
             </div>
-          </div>
-          <div class="form-group">
-            <label>Přijedete už v pátek?</label>
-            <div class="form-radio-group">
-              <label class="form-radio"><input type="radio" name="friday" value="Ano" required /> Ano</label>
-              <label class="form-radio"><input type="radio" name="friday" value="Ne" /> Ne</label>
+            <div class="form-group">
+              <label>Plánujete přespat ze soboty na neděli?</label>
+              <div class="form-radio-group">
+                <label class="form-radio"><input type="radio" name="overnight" value="Ano, ve společné místnosti" /> Ano, ve společné místnosti</label>
+                <label class="form-radio"><input type="radio" name="overnight" value="Ano, ve stanu" /> Ano, ve stanu</label>
+                <label class="form-radio"><input type="radio" name="overnight" value="Ano, zajistím si vlastní" /> Ano, zajistím si vlastní ubytování</label>
+                <label class="form-radio"><input type="radio" name="overnight" value="Ne" /> Ne</label>
+              </div>
             </div>
-          </div>
-          <div class="form-group">
-            <label>Zůstanete přes noc ze soboty na neděli?</label>
-            <div class="form-radio-group">
-              <label class="form-radio"><input type="radio" name="overnight" value="Ano" required /> Ano</label>
-              <label class="form-radio"><input type="radio" name="overnight" value="Ne" /> Ne</label>
+            <div class="form-group">
+              <label for="allergies">Jste vegetarián, vegan? Máte nějaké potravinové alergie nebo speciální dietní omezení?</label>
+              <textarea id="allergies" name="allergies" rows="3" placeholder="Např. laktóza, lepek, vegetarián…"></textarea>
             </div>
           </div>
           <div class="form-group">
@@ -267,6 +265,16 @@
             <textarea id="message" name="message" rows="5" placeholder="Sem napište svou zprávu…"></textarea>
           </div>
           <button type="submit" class="form-submit">Odeslat</button>
+        <script>
+          document.querySelectorAll('input[name="attendance"]').forEach(function(radio) {
+            radio.addEventListener('change', function() {
+              var coming = this.value === 'Ano';
+              var details = document.getElementById('attendance-details');
+              details.style.display = coming ? 'contents' : 'none';
+              document.getElementById('who').required = coming;
+            });
+          });
+        </script>
         </form>
       </div>
     </section>
