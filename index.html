@@ -273,14 +273,15 @@
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <button type="submit" class="form-submit">Odeslat</button>
         <script>
+          var conditionalFields = ['who', 'friday', 'overnight'];
           document.querySelectorAll('input[name="attendance"]').forEach(function(radio) {
             radio.addEventListener('change', function() {
               var coming = this.value === 'Ano';
               var details = document.getElementById('attendance-details');
               details.style.display = coming ? 'contents' : 'none';
-              document.getElementById('who').required = coming;
-              details.querySelectorAll('input[required]').forEach(function(el) {
-                el.required = coming;
+              conditionalFields.forEach(function(name) {
+                var el = document.querySelector('[name="' + name + '"]');
+                if (el) el.required = coming;
               });
             });
           });
