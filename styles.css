@@ -350,6 +350,8 @@ h1 {
   display: inline-block;
   margin: 18px 0 10px;
   letter-spacing: 0.04em;
+  position: relative;
+  z-index: 2;
 }
 
 .timeline-day:first-child {
