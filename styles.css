@@ -611,6 +611,11 @@ h1 {
     inset: 14px 16px;
   }
 
+  .eyebrow {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
   .section-inner {
     padding: 0 20px;
   }
