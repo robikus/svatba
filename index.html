@@ -278,6 +278,9 @@
               var details = document.getElementById('attendance-details');
               details.style.display = coming ? 'contents' : 'none';
               document.getElementById('who').required = coming;
+              details.querySelectorAll('input[required]').forEach(function(el) {
+                el.required = coming;
+              });
             });
           });
         </script>
