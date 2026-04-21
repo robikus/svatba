@@ -31,31 +31,30 @@ body {
 
 .lang-switch {
   position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 10;
+  top: 12px;
+  right: 14px;
+  z-index: 100;
   display: flex;
-  gap: 8px;
+  gap: 6px;
 }
 
 .lang-switch a img {
   display: block;
   border-radius: 2px;
+  width: 18px;
+  height: auto;
 }
 
 .lang-switch a {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
-  background: transparent;
-  border: 1px solid rgba(160, 160, 160, 0.5);
-  border-radius: 6px;
-  padding: 3px 5px;
-  transition: border-color 0.18s;
+  opacity: 0.85;
+  transition: opacity 0.18s;
 }
 
 .lang-switch a:hover {
-  border-color: rgba(160, 160, 160, 0.9);
+  opacity: 1;
 }
 
 /* ── Hero ─────────────────────────────────────────────── */
