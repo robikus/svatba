@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:www.budeveselka.cz)"
+      "WebFetch(domain:www.budeveselka.cz)",
+      "Bash(python -c \"from PIL import Image; img = Image.open\\('C:/Users/anana/Documents/git/svatba/img/thumb.jpg'\\); print\\(img.size\\)\")",
+      "Bash(powershell -command '\\(Get-Item '\\\\''C:/Users/anana/Documents/git/svatba/img/thumb.jpg'\\\\''\\) | Select-Object Length; Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\('\\\\''C:/Users/anana/Documents/git/svatba/img/thumb.jpg'\\\\''\\); Write-Host \"$\\($img.Width\\)x$\\($img.Height\\)\"; $img.Dispose\\(\\)')",
+      "Bash(python -c ' *)",
+      "Bash(powershell -command ' *)"
     ]
   }
 }
